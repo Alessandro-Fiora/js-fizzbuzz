@@ -10,33 +10,34 @@
 // 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 // ! DATI
-let num = 0;
-let output;
 
 // ! ELABORAZIONE
-// PER OGNI numero da 1 a 100
+// PER OGNI numero da 1 a 100 (indice: da 0 a 99)
 for (let i = 0; i < 100; i++) {
-  // assegno a num il valore del numero corrente
-  num = i + 1;
-  //   assegno ad output il valore di default del numero corrente
-  output = num;
+  // dichiaro per comodità una variabile numero e assegno il valore del numero corrente (indice + 1)
+  // dichiaro la variabile direttamente all'interno del for perchè fuori non mi serve
+  let num = i + 1;
 
-  // SE il numero corrente (USO NUM PER AVERE SEMPRE IL NUMERO CORRENTE E NON RICEVERE IL DATO SOSTITUITO) è divisibile per 3 lo sostituisco con Fizz
+  // dichiaro una variabile output e assegno il valore di default del numero corrente
+  // dichiaro la variabile direttamente all'interno del for perchè fuori non mi serve
+  let output = num;
+
+  // SE il numero corrente è divisibile per 3 assegno alla stringa di output il valore 'Fizz'
   if (num % 3 === 0) {
     output = "Fizz";
   }
 
-  // SE il numero corrente (USO NUM PER AVERE SEMPRE IL NUMERO CORRENTE E NON RICEVERE IL DATO SOSTITUITO) è divisibile per 5 lo sostituisco con Buzz
+  // SE il numero corrente è divisibile per 5 assegno alla stringa di output il valore 'Buzz'
   if (num % 5 === 0) {
     output = "Buzz";
   }
 
-  // SE il numero corrente (USO NUM PER AVERE SEMPRE IL NUMERO CORRENTE E NON RICEVERE IL DATO SOSTITUITO) è divisibile per 3 e divisibile per 5 lo sostituisco con FizzBuzz
+  // SE il numero corrente è divisibile per 3 e divisibile per 5 assegno alla stringa di output il valore 'FizzBuzz'
   if (num % 5 === 0 && (i + 1) % 3 === 0) {
     output = "FizzBuzz";
   }
 
   // ! OUTPUT
-  // STAMPO il numero corrente (eventualmente sostituito con Fizz, Buzz o FizzBuzz)
+  // STAMPO la stringa di output
   console.log(output);
 }
