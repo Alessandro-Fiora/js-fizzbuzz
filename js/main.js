@@ -9,7 +9,11 @@
 // 1. scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
 // 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
-// ! DATI
+// ^ PREFERENZE DI SVOLGIMENTO
+// ^ Ho scelto di creare due variabili di controllo (div3 e div5) per rendere il codice più leggibile
+// ^ Ho scelto di utilizzare else if e stringere i controlli degli per non far entrare il numero in tutti e 3 gli if in caso fosse divisibile sia per 3 che per 5
+// ^ Ho scelto di distinguere la variabile num dalla variabile output anche se con i controlli stretti non era necessario,
+// ^    perchè semanticamente non mi piaceva assegnare una stringa alla variabile num
 
 // ! ELABORAZIONE
 // PER OGNI numero da 1 a 100 (indice: da 0 a 99)
@@ -22,18 +26,22 @@ for (let i = 0; i < 100; i++) {
   // dichiaro la variabile direttamente all'interno del for perchè fuori non mi serve
   let output = num;
 
-  // SE il numero corrente è divisibile per 3 assegno alla stringa di output il valore 'Fizz'
-  if (num % 3 === 0) {
+  // creo due costanti per leggere meglio i seguenti if: una per validare se il numero è divisibile per 3 e una per validare se il numero è divisibile per 5
+  const div3 = num % 3 === 0;
+  const div5 = num % 5 === 0;
+
+  // SE il numero corrente è divisibile per 3 e non per 5 (così non continuo a sovrascrivere la variabile output) assegno alla stringa di output il valore 'Fizz'
+  if (div3 && !div5) {
     output = "Fizz";
   }
 
-  // SE il numero corrente è divisibile per 5 assegno alla stringa di output il valore 'Buzz'
-  if (num % 5 === 0) {
+  // SE il numero corrente è divisibile per 5 e non per 3 (così non continuo a sovrascrivere la variabile output) assegno alla stringa di output il valore 'Buzz'
+  else if (div5 && !div3) {
     output = "Buzz";
   }
 
   // SE il numero corrente è divisibile per 3 e divisibile per 5 assegno alla stringa di output il valore 'FizzBuzz'
-  if (num % 5 === 0 && num % 3 === 0) {
+  else if (div3 && div5) {
     output = "FizzBuzz";
   }
 
