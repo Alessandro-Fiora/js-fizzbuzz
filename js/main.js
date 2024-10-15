@@ -38,6 +38,6 @@ for (let i = 0; i < 100; i++) {
   }
 
   // ! OUTPUT
-  // STAMPO la stringa di output
+  // STAMPO la stringa di output all'interno del ciclo per farla stampare ogni volta
   console.log(output);
 }
