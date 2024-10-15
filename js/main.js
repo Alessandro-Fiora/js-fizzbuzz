@@ -10,9 +10,9 @@
 // 2. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 
 // ^ PREFERENZE DI SVOLGIMENTO
-// ^ Ho scelto di creare due variabili di controllo (div3 e div5) per rendere il codice più leggibile
-// ^ Ho scelto di utilizzare else if e stringere i controlli degli per non far entrare il numero in tutti e 3 gli if in caso fosse divisibile sia per 3 che per 5
-// ^ Ho scelto di distinguere la variabile num dalla variabile output anche se con i controlli stretti non era necessario,
+// ^ Ho scelto di creare due variabili di controllo ('div3' e 'div5') per rendere il codice più leggibile
+// ^ Ho scelto di utilizzare 'else if' e stringere i controlli per assegnare il valore ad 'output' una sola volta anche in caso fosse divisibile sia per 3 che per 5
+// ^ Ho scelto di distinguere la variabile 'num' dalla variabile 'output' anche se con i controlli stretti non era necessario,
 // ^    perchè semanticamente non mi piaceva assegnare una stringa alla variabile num
 
 // ! ELABORAZIONE
