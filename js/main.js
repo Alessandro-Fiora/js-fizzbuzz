@@ -33,7 +33,7 @@ for (let i = 0; i < 100; i++) {
   }
 
   // SE il numero corrente è divisibile per 3 e divisibile per 5 assegno alla stringa di output il valore 'FizzBuzz'
-  if (num % 5 === 0 && (i + 1) % 3 === 0) {
+  if (num % 5 === 0 && num % 3 === 0) {
     output = "FizzBuzz";
   }
 
