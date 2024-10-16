@@ -16,19 +16,15 @@
 // ^    perchè semanticamente non mi piaceva assegnare una stringa alla variabile num
 
 // ! ELABORAZIONE
-// PER OGNI numero da 1 a 100 (indice: da 0 a 99)
-for (let i = 0; i < 100; i++) {
-  // dichiaro per comodità una variabile numero e assegno il valore del numero corrente (indice + 1)
-  // dichiaro la variabile direttamente all'interno del for perchè fuori non mi serve
-  let num = i + 1;
-
+// PER OGNI numero da 1 a 100
+for (let i = 1; i <= 100; i++) {
   // dichiaro una variabile output e assegno il valore di default del numero corrente
   // dichiaro la variabile direttamente all'interno del for perchè fuori non mi serve
-  let output = num;
+  let output = i;
 
   // creo due costanti per leggere meglio i seguenti if: una per validare se il numero è divisibile per 3 e una per validare se il numero è divisibile per 5
-  const div3 = num % 3 === 0;
-  const div5 = num % 5 === 0;
+  const div3 = i % 3 === 0;
+  const div5 = i % 5 === 0;
 
   // SE il numero corrente è divisibile per 3 e non per 5 (così non continuo a sovrascrivere la variabile output) assegno alla stringa di output il valore 'Fizz'
   if (div3 && !div5) {
